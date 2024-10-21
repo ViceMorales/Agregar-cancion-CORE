@@ -12,14 +12,19 @@ import com.vicentemorales.repositorios.RepositorioCanciones;
 @Service
 public class ServicioCanciones {
 	@Autowired
-	RepositorioCanciones repositorio;
+	RepositorioCanciones repositorioCanciones;
 	
 	public List<Cancion> obtenerTodasLasCanciones(){
-		return repositorio.findAll();
+		return repositorioCanciones.findAll();
 	}
 	
 	public Cancion obtenerCancionPorId(Long id) {
-		Optional<Cancion> cancion = repositorio.findById(id);
+		Optional<Cancion> cancion = repositorioCanciones.findById(id);
 		return cancion.orElse(null);
 	}
+	
+	public Cancion agregarCancion(Cancion CancionesNuevo) {
+   		return this.repositorioCanciones.save(CancionesNuevo);
+	}
+
 }

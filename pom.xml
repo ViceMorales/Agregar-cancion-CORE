@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>ProyectoCanciones</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ProyectoCanciones</name>
+	<name>AgregarCanciones</name>
 	<description>Core Mostrar canciones</description>
 	<url/>
 	<licenses>
@@ -38,7 +38,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
